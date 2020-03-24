@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\z00s600151\\source\\repos\\Oden\\Common\\Common.csproj": {}
+    "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\z00s600151\\source\\repos\\Oden\\Common\\Common.csproj": {
+    "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\Oden\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\z00s600151\\source\\repos\\Oden\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\z00s600151\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z00s600151\\source\\repos\\Oden\\Common\\obj\\",
+        "outputPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\z00s600151\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -52,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

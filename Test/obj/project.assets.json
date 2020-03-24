@@ -6884,11 +6884,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\Oden\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\z00s600151\\source\\repos\\Oden\\Test\\Test.csproj",
+      "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\z00s600151\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\z00s600151\\source\\repos\\Oden\\Test\\obj\\",
+      "outputPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\z00s600151\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6947,7 +6947,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

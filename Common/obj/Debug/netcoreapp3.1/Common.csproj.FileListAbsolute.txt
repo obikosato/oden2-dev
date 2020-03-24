@@ -1,0 +1,8 @@
+C:\Users\z00s600151\source\repos\oden2-dev\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+C:\Users\z00s600151\source\repos\oden2-dev\Common\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\z00s600151\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
+C:\Users\z00s600151\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+C:\Users\z00s600151\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+C:\Users\z00s600151\source\repos\oden2-dev\Common\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\z00s600151\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.dll
+C:\Users\z00s600151\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.pdb

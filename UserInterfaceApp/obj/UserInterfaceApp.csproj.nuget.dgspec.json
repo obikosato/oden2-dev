@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\z00s600151\\source\\repos\\Oden\\UserInterfaceApp\\UserInterfaceApp.csproj": {}
+    "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\UserInterfaceApp\\UserInterfaceApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\z00s600151\\source\\repos\\Oden\\UserInterfaceApp\\UserInterfaceApp.csproj": {
+    "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\UserInterfaceApp\\UserInterfaceApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\Oden\\UserInterfaceApp\\UserInterfaceApp.csproj",
+        "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\UserInterfaceApp\\UserInterfaceApp.csproj",
         "projectName": "UserInterfaceApp",
-        "projectPath": "C:\\Users\\z00s600151\\source\\repos\\Oden\\UserInterfaceApp\\UserInterfaceApp.csproj",
+        "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\UserInterfaceApp\\UserInterfaceApp.csproj",
         "packagesPath": "C:\\Users\\z00s600151\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z00s600151\\source\\repos\\Oden\\UserInterfaceApp\\obj\\",
+        "outputPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\UserInterfaceApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\z00s600151\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
