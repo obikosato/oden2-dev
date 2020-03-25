@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Common/1.0.0": {
         "dependencies": {
+          "Log": "1.0.0",
           "MySql.Data.EntityFrameworkCore": "8.0.19"
         },
         "runtime": {
@@ -1224,6 +1225,11 @@
             "fileVersion": "1.0.24212.1"
           }
         }
+      },
+      "Log/1.0.0": {
+        "runtime": {
+          "Log.dll": {}
+        }
       }
     }
   },
@@ -2065,6 +2071,11 @@
       "sha512": "sha512-Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "Log/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
