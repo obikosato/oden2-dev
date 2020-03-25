@@ -7,6 +7,7 @@ namespace Common.Tools.Database
         public DbSet<Account> Accounts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseMySQL(MySqlConnectionStrings.ConnectionStrings);
+            => optionsBuilder.UseMySQL(@"server=localhost;database=mydb;userid=root;pwd=password;sslmode=none;");
+          //  => optionsBuilder.UseMySQL(MySqlConnectionStrings.ConnectionStrings);
     }
 }

@@ -13,4 +13,11 @@
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\Log\Log.csproj" />
+    <ProjectReference Include="..\NotificationApp\NotificationApp.csproj" />
+    <ProjectReference Include="..\UserInterfaceApp\UserInterfaceApp.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,8 +1,0 @@
-C:\Users\user\source\repos\oden2-dev\Common\bin\Debug\netcoreapp3.1\Common.deps.json
-C:\Users\user\source\repos\oden2-dev\Common\bin\Debug\netcoreapp3.1\Common.dll
-C:\Users\user\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
-C:\Users\user\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
-C:\Users\user\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
-C:\Users\user\source\repos\oden2-dev\Common\bin\Debug\netcoreapp3.1\Common.pdb
-C:\Users\user\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.dll
-C:\Users\user\source\repos\oden2-dev\Common\obj\Debug\netcoreapp3.1\Common.pdb
