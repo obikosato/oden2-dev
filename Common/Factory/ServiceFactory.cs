@@ -7,26 +7,15 @@ namespace Oden.Common.Factory
 {
     public class ServiceFactory
     {
-        private readonly IDbAccessor da;
-        private readonly ILineMessenger lm;
-        private readonly IEventInfoConverter ei;
+        private readonly IDbAccessor dbAccessor;
+        private readonly ILineMessenger lineMessenger;
+        private readonly IEventInfoConverter eventInfoConverter;
 
-        public ServiceFactory(IDbAccessor da, IEventInfoConverter ei, ILineMessenger lm)
+        public ServiceFactory(IDbAccessor dbAccessor = null, IEventInfoConverter eventInfoConverter = null, ILineMessenger lineMessenger = null)
         {
-            this.da = da;
-            this.ei = ei;
-            this.lm = lm;
-        }
-
-        public ServiceFactory(IDbAccessor da, ILineMessenger lm)
-        {
-            this.da = da;
-            this.lm = lm;
-        }
-
-        public ServiceFactory(IDbAccessor da)
-        {
-            this.da = da;
+            this.dbAccessor = dbAccessor;
+            this.eventInfoConverter = eventInfoConverter;
+            this.lineMessenger = lineMessenger;
         }
 
         public enum ServiceName { REGIST, AUTH, UNREGIST, NOTIFY }
@@ -36,16 +25,16 @@ namespace Oden.Common.Factory
             IService service = null;
             switch (serviceName) {
                 case ServiceName.REGIST:
-                    service = new RegistService(da, lm);
+                    service = new RegistService(dbAccessor, lineMessenger);
                     break;
                 case ServiceName.AUTH:
-                    service = new AuthService(da);
+                    service = new AuthService(dbAccessor);
                     break;
                 case ServiceName.UNREGIST:
-                    service = new UnregistService(da);
+                    service = new UnregistService(dbAccessor);
                     break;
                 case ServiceName.NOTIFY:
-                    service = new NotifyService(da, ei, lm);
+                    service = new NotifyService(dbAccessor, eventInfoConverter, lineMessenger);
                     break;
             }    
             return service;

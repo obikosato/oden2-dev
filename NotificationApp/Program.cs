@@ -14,7 +14,7 @@ namespace NotificationApp
             IDbAccessor db = new DbAccessor();
             IEventInfoConverter ei = new EventInfoConverter();
             ILineMessenger lm = new LineMessenger();
-            ServiceFactory factory = new ServiceFactory(db, ei, lm);
+            ServiceFactory factory = new ServiceFactory(dbAccessor:db, eventInfoConverter:ei, lineMessenger:lm);
 
             try
             {

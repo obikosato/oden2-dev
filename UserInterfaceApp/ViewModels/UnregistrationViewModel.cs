@@ -16,7 +16,7 @@ namespace UserInterfaceApp.ViewModels
         {
             string[] inputData = { Id, Pwd };
             IDbAccessor db = new DbAccessor();
-            ServiceFactory factory = new ServiceFactory(db);
+            ServiceFactory factory = new ServiceFactory(dbAccessor:db);
 
             try
             {
