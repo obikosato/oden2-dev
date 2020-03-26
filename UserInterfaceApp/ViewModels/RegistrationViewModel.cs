@@ -25,7 +25,7 @@ namespace UserInterfaceApp.ViewModels
             string[] inputData = { Id, Pwd, Token };
             IDbAccessor db = new DbAccessor();
             ILineMessenger lm = new LineMessenger();
-            ServiceFactory factory = new ServiceFactory(db, lm);
+            ServiceFactory factory = new ServiceFactory(dbAccessor:db, lineMessenger:lm);
 
             try
             {
