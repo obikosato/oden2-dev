@@ -1,9 +1,9 @@
 ﻿using System;
-using BlazorApp0124.Models.Factory;
 using Common.Services;
 using Common.Tools.Database;
 using Common.Tools.LineNotify;
 using Common.Tools.WebSite;
+using Oden.Common.Factory;
 
 namespace NotificationApp
 {

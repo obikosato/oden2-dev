@@ -1,3 +1,4 @@
+using UserInterfaceApp.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +22,10 @@ namespace UserInterfaceApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            //Veiwで注入するためにサービスコンテナに追加
+            services.AddScoped<RegistrationViewModel>();
+            services.AddScoped<UnregistrationViewModel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

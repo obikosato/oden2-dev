@@ -1,0 +1,110 @@
+﻿@page "/regist"
+@inject ViewModels.RegistrationViewModel vm
+@inject NavigationManager NavigationManager
+<!--
+    File: Regist.razor
+    Author: Obiko Sato
+    Copyright: Copyright 2020, Oden
+    Email: Obiko.Sato@jp.ricoh.com
+-->
+
+<h1>
+    新横浜混雑アラートアプリ / 通知先登録
+</h1>
+
+※このアプリを使用するには、LINEのアクセストークンが必要です。
+<br>
+アクセストークンは <a href="https://notify-bot.line.me/ja/">LINE Notify</a> から取得できます。
+<br>
+<p><font color="red"><strong>@vm.Message</strong></font></p>
+<br>
+<p>
+    新規 通知先ID
+    <input autofocus
+           required
+           type="text"
+           size="16"
+           maxlength="16"
+           pattern="^[0-9A-Za-z]+$"
+           @bind="vm.Id"
+           placeholder="sato2703"
+           title="1~16文字の半角英数字(推奨：名前と内線番号の組み合わせ)" /><br>
+    <div class="subtext">
+        ※システムが通知先を識別するために使用します。<br>
+        問題発生時のために管理者が本人を特定できるIDにすることを推奨します。<br><br>
+    </div>
+</p>
+
+<p>
+    新規 パスワード
+    <input autofocus
+           required
+           type="password"
+           size="16"
+           minlength="8"
+           maxlength="16"
+           pattern="^[0-9A-Za-z]+$"
+           @bind="vm.Pwd"
+           placeholder="password12345678"
+           title="8~16文字の半角英数字" /><br>
+    <div class="subtext">
+        ※登録を解除する際に使用します。<br><br>
+    </div>
+</p>
+
+<p>
+    新規 アクセストークン
+    <input autofocus
+           required
+           type="text"
+           size="43"
+           minlength="43"
+           maxlength="43"
+           pattern="^[0-9A-Za-z]+$"
+           @bind="vm.Token"
+           placeholder="examplehijklmnopqrstuvwxyz1234567890ABCDEFG"
+           title="43文字の半角英数字" /><br>
+    <div class="subtext">
+        ※<a href="https://notify-bot.line.me/ja/">LINE Notify</a>から取得してください。<br>
+        「次へ」をクリックすると、こちらに入力されたアクセストークンに本人認証のための認証番号が送信されます。
+    </div>
+</p>
+
+
+
+<button class="btn btn-primary" @onclick="JumpToAuth">
+    次へ
+</button>
+
+<button class="btn btn-secondary" @onclick="ToIndex">
+    やめる
+</button>
+
+@code{
+
+    private void ToIndex()
+    {
+        NavigationManager.NavigateTo("/");
+        vm.Id = null;
+        vm.Pwd = null;
+        vm.Token = null;
+        vm.AuthIn = null;
+        vm.Message = null;
+        this.StateHasChanged();
+    }
+
+    private void JumpToAuth()
+    {
+        vm.Message = null;
+        if (vm.InputIsValid())
+        {
+            if (vm.DoRegist())
+            {
+                NavigationManager.NavigateTo("/regist/auth/" + vm.Id);
+            }
+        }
+        vm.Pwd = null;
+        vm.Token = null;
+        this.StateHasChanged();
+    }
+}

@@ -4,9 +4,9 @@ using Common.Services;
 using Common.Tools.Database;
 using Oden.Common.Factory;
 
-namespace BlazorApp0124.ViewModels
+namespace UserInterfaceApp.ViewModels
 {
-    public class UnregistViewModel
+    public class UnregistrationViewModel
     {
         public string Id { get; set; }
         public string Pwd { get; set; }
