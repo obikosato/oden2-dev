@@ -3,12 +3,12 @@ using Common.Tools.Database;
 using Common.Tools.LineNotify;
 using Common.Tools.WebSite;
 
-namespace BlazorApp0124.Models.Factory
+namespace Oden.Common.Factory
 {
     public class ServiceFactory
     {
         private readonly IDbAccessor da;
-        private readonly Common.Tools.LineNotify.ILineMessenger lm;
+        private readonly ILineMessenger lm;
         private readonly IEventInfoConverter ei;
 
         public ServiceFactory(IDbAccessor da, IEventInfoConverter ei, ILineMessenger lm)

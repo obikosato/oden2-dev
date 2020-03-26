@@ -5,9 +5,9 @@ using Common.Tools.Database;
 using Common.Tools.LineNotify;
 using Oden.Common.Factory;
 
-namespace BlazorApp0124.ViewModels
+namespace UserInterfaceApp.ViewModels
 {
-    public class RegistViewModel
+    public class RegistrationViewModel
     {
         //parameters for input 
         public string Id { get; set; }
