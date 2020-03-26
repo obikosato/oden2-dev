@@ -1908,12 +1908,22 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "TimeZoneConverter/3.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/TimeZoneConverter.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/TimeZoneConverter.dll": {}
+        }
+      },
       "Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Log": "1.0.0",
-          "MySql.Data.EntityFrameworkCore": "8.0.19"
+          "MySql.Data.EntityFrameworkCore": "8.0.19",
+          "TimeZoneConverter": "3.2.0"
         },
         "compile": {
           "bin/placeholder/Common.dll": {}
@@ -6545,6 +6555,33 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "TimeZoneConverter/3.2.0": {
+      "sha512": "f0UpF9H+ylj3qjO/l2+Yt0R77FFR327efJwsoXAys6J1fSYFcQPrPVhaGVVWoN79+PVutj0qzj79kuhSPN70gA==",
+      "type": "package",
+      "path": "timezoneconverter/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/TimeZoneConverter.dll",
+        "lib/net35/TimeZoneConverter.xml",
+        "lib/net40/TimeZoneConverter.dll",
+        "lib/net40/TimeZoneConverter.xml",
+        "lib/net45/TimeZoneConverter.dll",
+        "lib/net45/TimeZoneConverter.xml",
+        "lib/net461/TimeZoneConverter.dll",
+        "lib/net461/TimeZoneConverter.xml",
+        "lib/net471/TimeZoneConverter.dll",
+        "lib/net471/TimeZoneConverter.xml",
+        "lib/netstandard1.1/TimeZoneConverter.dll",
+        "lib/netstandard1.1/TimeZoneConverter.xml",
+        "lib/netstandard1.3/TimeZoneConverter.dll",
+        "lib/netstandard1.3/TimeZoneConverter.xml",
+        "lib/netstandard2.0/TimeZoneConverter.dll",
+        "lib/netstandard2.0/TimeZoneConverter.xml",
+        "timezoneconverter.3.2.0.nupkg.sha512",
+        "timezoneconverter.nuspec"
+      ]
+    },
     "Common/1.0.0": {
       "type": "project",
       "path": "../Common/Common.csproj",
@@ -6562,33 +6599,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\z00s600151\\.nuget\\packages\\": {}
+    "/Users/obi/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\NotificationApp\\NotificationApp.csproj",
+      "projectUniqueName": "/Users/obi/Projects/oden2-dev/NotificationApp/NotificationApp.csproj",
       "projectName": "NotificationApp",
-      "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\NotificationApp\\NotificationApp.csproj",
-      "packagesPath": "C:\\Users\\z00s600151\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\NotificationApp\\obj\\",
+      "projectPath": "/Users/obi/Projects/oden2-dev/NotificationApp/NotificationApp.csproj",
+      "packagesPath": "/Users/obi/.nuget/packages/",
+      "outputPath": "/Users/obi/Projects/oden2-dev/NotificationApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\z00s600151\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/obi/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj": {
-              "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj"
+            "/Users/obi/Projects/oden2-dev/Common/Common.csproj": {
+              "projectPath": "/Users/obi/Projects/oden2-dev/Common/Common.csproj"
             }
           }
         }
@@ -6616,7 +6651,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
       }
     }
   }

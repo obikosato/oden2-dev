@@ -16,7 +16,7 @@ namespace Common.Tools.Database
             con.Dispose();
         }
 
-        public Account AccountAddAccount(string id, string password, string accessToken)
+        public Account AddAccount(string id, string password, string accessToken)
         {
             Account newAccount = new Account
             {

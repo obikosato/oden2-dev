@@ -1,34 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\NotificationApp\\NotificationApp.csproj": {}
+    "/Users/obi/Projects/oden2-dev/NotificationApp/NotificationApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj": {
+    "/Users/obi/Projects/oden2-dev/Common/Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj",
+        "projectUniqueName": "/Users/obi/Projects/oden2-dev/Common/Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\z00s600151\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\obj\\",
+        "projectPath": "/Users/obi/Projects/oden2-dev/Common/Common.csproj",
+        "packagesPath": "/Users/obi/.nuget/packages/",
+        "outputPath": "/Users/obi/Projects/oden2-dev/Common/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\z00s600151\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/obi/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Log\\Log.csproj": {
-                "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Log\\Log.csproj"
+              "/Users/obi/Projects/oden2-dev/Log/Log.csproj": {
+                "projectPath": "/Users/obi/Projects/oden2-dev/Log/Log.csproj"
               }
             }
           }
@@ -45,6 +43,10 @@
             "MySql.Data.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.19, )"
+            },
+            "TimeZoneConverter": {
+              "target": "Package",
+              "version": "[3.2.0, )"
             }
           },
           "imports": [
@@ -62,28 +64,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Log\\Log.csproj": {
+    "/Users/obi/Projects/oden2-dev/Log/Log.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Log\\Log.csproj",
+        "projectUniqueName": "/Users/obi/Projects/oden2-dev/Log/Log.csproj",
         "projectName": "Log",
-        "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Log\\Log.csproj",
-        "packagesPath": "C:\\Users\\z00s600151\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Log\\obj\\",
+        "projectPath": "/Users/obi/Projects/oden2-dev/Log/Log.csproj",
+        "packagesPath": "/Users/obi/.nuget/packages/",
+        "outputPath": "/Users/obi/Projects/oden2-dev/Log/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\z00s600151\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/obi/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -114,35 +114,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\NotificationApp\\NotificationApp.csproj": {
+    "/Users/obi/Projects/oden2-dev/NotificationApp/NotificationApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\NotificationApp\\NotificationApp.csproj",
+        "projectUniqueName": "/Users/obi/Projects/oden2-dev/NotificationApp/NotificationApp.csproj",
         "projectName": "NotificationApp",
-        "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\NotificationApp\\NotificationApp.csproj",
-        "packagesPath": "C:\\Users\\z00s600151\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\NotificationApp\\obj\\",
+        "projectPath": "/Users/obi/Projects/oden2-dev/NotificationApp/NotificationApp.csproj",
+        "packagesPath": "/Users/obi/.nuget/packages/",
+        "outputPath": "/Users/obi/Projects/oden2-dev/NotificationApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\z00s600151\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/obi/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\z00s600151\\source\\repos\\oden2-dev\\Common\\Common.csproj"
+              "/Users/obi/Projects/oden2-dev/Common/Common.csproj": {
+                "projectPath": "/Users/obi/Projects/oden2-dev/Common/Common.csproj"
               }
             }
           }
@@ -170,7 +168,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
         }
       }
     }

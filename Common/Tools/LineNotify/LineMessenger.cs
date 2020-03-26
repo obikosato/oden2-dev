@@ -5,7 +5,7 @@ using System.IO;
 
 namespace Common.Tools.LineNotify
 {
-    class LineMessenger : ILineMessenger
+    public class LineMessenger : ILineMessenger
     {        
         private readonly string pythonInterpreterPath = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe";
         private readonly string pythonScriptPath;

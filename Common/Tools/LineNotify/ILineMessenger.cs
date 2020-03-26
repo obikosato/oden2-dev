@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Common.Tools.LineNotify
 {
-    interface ILineMessenger
+    public interface ILineMessenger
     {
         public bool SendMessage(string accessToken, string message);
     }

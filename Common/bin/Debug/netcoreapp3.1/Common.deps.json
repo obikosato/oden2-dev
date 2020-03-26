@@ -9,7 +9,8 @@
       "Common/1.0.0": {
         "dependencies": {
           "Log": "1.0.0",
-          "MySql.Data.EntityFrameworkCore": "8.0.19"
+          "MySql.Data.EntityFrameworkCore": "8.0.19",
+          "TimeZoneConverter": "3.2.0"
         },
         "runtime": {
           "Common.dll": {}
@@ -1226,6 +1227,14 @@
           }
         }
       },
+      "TimeZoneConverter/3.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/TimeZoneConverter.dll": {
+            "assemblyVersion": "3.2.0.0",
+            "fileVersion": "3.2.0.0"
+          }
+        }
+      },
       "Log/1.0.0": {
         "runtime": {
           "Log.dll": {}
@@ -2071,6 +2080,13 @@
       "sha512": "sha512-Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "TimeZoneConverter/3.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f0UpF9H+ylj3qjO/l2+Yt0R77FFR327efJwsoXAys6J1fSYFcQPrPVhaGVVWoN79+PVutj0qzj79kuhSPN70gA==",
+      "path": "timezoneconverter/3.2.0",
+      "hashPath": "timezoneconverter.3.2.0.nupkg.sha512"
     },
     "Log/1.0.0": {
       "type": "project",
