@@ -14,6 +14,7 @@ namespace Common.Tools.LineNotify
         {
             pythonScriptPath = pyscript;
         }
+
         public bool SendMessage(string accessToken, string message)
         {
             if (File.Exists(pythonScriptPath))

@@ -10,13 +10,8 @@ namespace Common.Tools.WebSite
         private readonly string pythonInterpreterPath = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe";
         private readonly string pythonScriptPath;
 
-        public EventInfoConverter(string pyscript) {
+        public EventInfoConverter(string pyscript = @"C:\Users\user\source\repos\BlazorApp0124\BlazorApp0124.Models\Tools\GetEventInfo.py") {
             pythonScriptPath = pyscript;
-        }
-
-        public EventInfoConverter()
-        {
-            pythonScriptPath = @"C:\Users\user\source\repos\BlazorApp0124\BlazorApp0124.Models\Tools\GetEventInfo.py";
         }
 
         public EventInfo ConvertEventInfo()
