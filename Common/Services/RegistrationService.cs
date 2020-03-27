@@ -7,16 +7,17 @@ using Common.Tools.LineNotify;
 namespace Common.Services
 
 {
-    public class RegistService : IService
+    public class RegistrationService : IService
     {
         private readonly IDbAccessor dbAccessor;
         private readonly ILineMessenger lineMessenger;
 
-        public RegistService(IDbAccessor dbAccessor, ILineMessenger lineMessenger)
+        public RegistrationService(IDbAccessor dbAccessor, ILineMessenger lineMessenger)
         {
-            this.dbAccessor = dbAccessor;
-            this.lineMessenger = lineMessenger;
+            this.dbAccessor = dbAccessor ?? throw new ArgumentNullException(nameof(dbAccessor));
+            this.lineMessenger = lineMessenger ?? throw new ArgumentNullException(nameof(lineMessenger));
         }
+
         public void Dispose()
         {
             dbAccessor.Dispose();

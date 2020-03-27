@@ -25,16 +25,16 @@ namespace Oden.Common.Factory
             IService service = null;
             switch (serviceName) {
                 case ServiceName.REGIST:
-                    service = new RegistService(dbAccessor, lineMessenger);
+                    service = new RegistrationService(dbAccessor, lineMessenger);
                     break;
                 case ServiceName.AUTH:
-                    service = new AuthService(dbAccessor);
+                    service = new AuthentificationService(dbAccessor);
                     break;
                 case ServiceName.UNREGIST:
-                    service = new UnregistService(dbAccessor);
+                    service = new UnregistrationService(dbAccessor);
                     break;
                 case ServiceName.NOTIFY:
-                    service = new NotifyService(dbAccessor, eventInfoConverter, lineMessenger);
+                    service = new NotificationService(dbAccessor, eventInfoConverter, lineMessenger);
                     break;
             }    
             return service;
