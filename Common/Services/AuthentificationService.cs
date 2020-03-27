@@ -3,12 +3,12 @@ using System;
 
 namespace Common.Services
 {
-    public class AuthService : IService
+    public class AuthentificationService : IService
     {
         private readonly IDbAccessor dbAccessor;
-        public AuthService(IDbAccessor da)
+        public AuthentificationService(IDbAccessor dbAccessor)
         {
-            dbAccessor = da;
+            this.dbAccessor = dbAccessor ?? throw new ArgumentNullException(nameof(dbAccessor));
         }
         public void Dispose()
         {

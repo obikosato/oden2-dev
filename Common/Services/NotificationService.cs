@@ -7,17 +7,17 @@ using TimeZoneConverter;
 
 namespace Common.Services
 {
-    public class NotifyService : IService
+    public class NotificationService : IService
     {
         private readonly IDbAccessor dbAccessor;
         private readonly ILineMessenger lineMessenger;
         private readonly IEventInfoConverter eventInfoConverter;
 
-        public NotifyService(IDbAccessor da, IEventInfoConverter ei, ILineMessenger lm) 
+        public NotificationService(IDbAccessor dbAccessor, IEventInfoConverter eventInfoConverter, ILineMessenger lineMessenger) 
         {
-            dbAccessor = da;
-            eventInfoConverter = ei;
-            lineMessenger = lm;
+            this.dbAccessor = dbAccessor ?? throw new ArgumentNullException(nameof(dbAccessor));
+            this.eventInfoConverter = eventInfoConverter ?? throw new ArgumentNullException(nameof(eventInfoConverter));
+            this.lineMessenger = lineMessenger ?? throw new ArgumentNullException(nameof(lineMessenger));
         }
 
         public ServiceResults DoService(string[] inputData) {

@@ -3,13 +3,14 @@ using Common.Tools.Database;
 
 namespace Common.Services
 {
-    public class UnregistService : IService
+    public class UnregistrationService : IService
     {
         private readonly IDbAccessor dbAccessor;
-        public UnregistService(IDbAccessor da)
+        public UnregistrationService(IDbAccessor dbAccessor)
         {
-            dbAccessor = da;
+            this.dbAccessor = dbAccessor ?? throw new ArgumentNullException(nameof(dbAccessor));
         }
+
         public void Dispose()
         {
             dbAccessor.Dispose();
