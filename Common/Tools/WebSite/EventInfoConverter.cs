@@ -10,7 +10,7 @@ namespace Common.Tools.WebSite
         private readonly string pythonInterpreterPath = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe";
         private readonly string pythonScriptPath;
 
-        public EventInfoConverter(string pyscript = @"C:oden2-dev\Common\Tools\WebSite\GetEventInfoJson.py") {
+        public EventInfoConverter(string pyscript = @"C:\oden2-dev\Common\Tools\WebSite\GetEventInfoJson.py") {
             pythonScriptPath = pyscript;
         }
 
