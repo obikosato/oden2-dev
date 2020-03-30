@@ -16,7 +16,7 @@ namespace Common.Tools.WebSite
 
         public EventInfo ConvertEventInfo()
         {
-            EventInfo convertedEventInfo = new EventInfo();
+            EventInfo convertedEventInfo = new EventInfo { date = "", artist = "", title = ""};
             if (File.Exists(pythonScriptPath))
             {
                 var process = new Process()
