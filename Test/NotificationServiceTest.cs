@@ -51,7 +51,7 @@ namespace Test
 
             //Assert
             int actualListSize = lm.InputList.Count;
-            string actualToken = lm.InputList[0].token;
+            string actualToken = lm.InputList[0].accessToken;
             string actualMsg = lm.InputList[0].message;
 
             Assert.IsTrue(expectedListSize == actualListSize);
@@ -106,7 +106,7 @@ namespace Test
 
             //Assert
             int actualListSize = lm.InputList.Count;
-            string[] actualToken = { lm.InputList[0].token, lm.InputList[1].token };
+            string[] actualToken = { lm.InputList[0].accessToken, lm.InputList[1].accessToken };
             string[] actualMsg = { lm.InputList[0].message, lm.InputList[1].message };
 
             Assert.IsTrue(actualListSize == expectedListSize);
@@ -196,7 +196,7 @@ namespace Test
             Assert.IsTrue(actualListSize == expectedListSize);
             for (int i = 0; i < actualListSize; i++)
             {
-                Assert.AreEqual(accounts[i].access_token, lm.InputList[i].token);
+                Assert.AreEqual(accounts[i].access_token, lm.InputList[i].accessToken);
                 Assert.AreEqual(expectedMsg, lm.InputList[i].message);
             }
         }
@@ -248,7 +248,7 @@ namespace Test
             Assert.IsTrue(actualListSize == expectedListSize);
             for (int i = 0; i < actualListSize; i++)
             {
-                Assert.AreEqual(expectedList[i].access_token, lm.InputList[i].token);
+                Assert.AreEqual(expectedList[i].access_token, lm.InputList[i].accessToken);
                 Assert.AreEqual(expectedMsg, lm.InputList[i].message);
             }
         }
