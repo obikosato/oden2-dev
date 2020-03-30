@@ -43,6 +43,7 @@
 
     private void ToIndex()
     {
+        vm.DoCancel();
         NavigationManager.NavigateTo("/");
         vm.Id = null;
         vm.Pwd = null;
