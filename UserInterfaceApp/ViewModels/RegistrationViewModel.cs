@@ -51,6 +51,10 @@ namespace UserInterfaceApp.ViewModels
             }
         }
 
+        public void DoCancel() {
+            IDbAccessor db = new DbAccessor();
+            db.DeleteAccount(Id);
+        }
         public bool DoAuth()
         {
             string[] inputData = { Id, AuthIn, TokenAuthSend };
