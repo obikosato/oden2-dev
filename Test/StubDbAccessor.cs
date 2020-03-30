@@ -6,11 +6,11 @@ namespace Test
 {
     public class StubDbAccessor : IDbAccessor
     {
-        private readonly List<Account> tokens;
+        private readonly List<Account> accounts;
 
-        public StubDbAccessor(List<Account> tokens) 
+        public StubDbAccessor(List<Account> accounts) 
         {
-            this.tokens = tokens;
+            this.accounts = accounts;
         }
 
         public void ActivateAccount(string id)
@@ -32,7 +32,7 @@ namespace Test
 
         public List<Account> GetActiveAccounts()
         {
-            return tokens;
+            return accounts;
         }
 
         public bool IsVerified(string id, string password)

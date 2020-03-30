@@ -1,21 +1,19 @@
-﻿using Common.Services;
-using Common.Tools.WebSite;
+﻿using Common.Tools.WebSite;
 
 namespace Test
 {
     class StubEventInfoConverter : IEventInfoConverter
     {
-        private readonly string msg;
+        private readonly EventInfo eventInfo;
 
         public StubEventInfoConverter(EventInfo eventInfo)
         {
-            msg = Messages.AM01(eventInfo.title, eventInfo.artist);
-            msg += Messages.URL;
+            this.eventInfo = eventInfo;
         }
 
         public EventInfo ConvertEventInfo()
         {
-            throw new System.NotImplementedException();
+            return eventInfo;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Test
         public void DoServiceTest01()
         {
             //Arrange
-            List<Account> tokens = new List<Account>
+            List<Account> accounts = new List<Account>
             {
                 new Account
                 {
@@ -34,12 +34,12 @@ namespace Test
                 artist = "testArtist"
             };
 
-            int expectedListSize = tokens.Count;
-            string expectedToken = tokens[0].access_token;
+            int expectedListSize = accounts.Count;
+            string expectedToken = accounts[0].access_token;
             string expectedMsg = Messages.AM01(eventInfo.title, eventInfo.artist) + Messages.URL;
 
 
-            IDbAccessor db = new StubDbAccessor(tokens);
+            IDbAccessor db = new StubDbAccessor(accounts);
             IEventInfoConverter ei = new StubEventInfoConverter(eventInfo);
             MockLineMessenger lm = new MockLineMessenger();
 
@@ -57,7 +57,7 @@ namespace Test
             Assert.IsTrue(expectedListSize == actualListSize);
             Assert.AreEqual(expectedToken, actualToken);
             Assert.AreEqual(expectedMsg, actualMsg);
-            
+
         }
 
         [TestMethod]
@@ -65,7 +65,7 @@ namespace Test
         public void DoServiceTest02()
         {
             //Arrange
-            List<Account> tokens = new List<Account>
+            List<Account> accounts = new List<Account>
             {
                 new Account
                 {
@@ -89,12 +89,12 @@ namespace Test
                 artist = "testArtist"
             };
 
-            int expectedListSize = tokens.Count;
-            string[] expectedToken = { tokens[0].access_token, tokens[1].access_token };
+            int expectedListSize = accounts.Count;
+            string[] expectedToken = { accounts[0].access_token, accounts[1].access_token };
 
             string expectedMsg = Messages.AM01(eventInfo.title, eventInfo.artist) + Messages.URL;
 
-            IDbAccessor db = new StubDbAccessor(tokens);
+            IDbAccessor db = new StubDbAccessor(accounts);
             IEventInfoConverter ei = new StubEventInfoConverter(eventInfo);
             MockLineMessenger lm = new MockLineMessenger();
 
@@ -110,7 +110,8 @@ namespace Test
             string[] actualMsg = { lm.InputList[0].message, lm.InputList[1].message };
 
             Assert.IsTrue(actualListSize == expectedListSize);
-            for (int i = 0; i < actualListSize; i++) {
+            for (int i = 0; i < actualListSize; i++)
+            {
                 Assert.AreEqual(expectedToken[i], actualToken[i]);
                 Assert.AreEqual(expectedMsg, actualMsg[i]);
             }
@@ -121,7 +122,7 @@ namespace Test
         public void DoServiceTest03()
         {
             //Arrange
-            List<Account> tokens = new List<Account>();
+            List<Account> accounts = new List<Account>();
 
             EventInfo eventInfo = new EventInfo
             {
@@ -129,9 +130,9 @@ namespace Test
                 artist = "testArtist"
             };
 
-            int expectedListSize = tokens.Count;
+            int expectedListSize = accounts.Count;
 
-            IDbAccessor db = new StubDbAccessor(tokens);
+            IDbAccessor db = new StubDbAccessor(accounts);
             IEventInfoConverter ei = new StubEventInfoConverter(eventInfo);
             MockLineMessenger lm = new MockLineMessenger();
 
@@ -155,11 +156,11 @@ namespace Test
             //Arrange
             int n = 100;
 
-            List<Account> tokens = new List<Account>();
+            List<Account> accounts = new List<Account>();
 
             for (int i = 0; i < n; i++)
             {
-                tokens.Add(new Account
+                accounts.Add(new Account
                 {
                     is_valid = 1,
                     id = "testId0",
@@ -175,11 +176,11 @@ namespace Test
                 artist = "testArtist"
             };
 
-            int expectedListSize = tokens.Count;
+            int expectedListSize = accounts.Count;
 
             string expectedMsg = Messages.AM01(eventInfo.title, eventInfo.artist) + Messages.URL;
 
-            IDbAccessor db = new StubDbAccessor(tokens);
+            IDbAccessor db = new StubDbAccessor(accounts);
             IEventInfoConverter ei = new StubEventInfoConverter(eventInfo);
             MockLineMessenger lm = new MockLineMessenger();
 
@@ -195,7 +196,7 @@ namespace Test
             Assert.IsTrue(actualListSize == expectedListSize);
             for (int i = 0; i < actualListSize; i++)
             {
-                Assert.AreEqual(tokens[i].access_token, lm.InputList[i].token);
+                Assert.AreEqual(accounts[i].access_token, lm.InputList[i].token);
                 Assert.AreEqual(expectedMsg, lm.InputList[i].message);
             }
         }
@@ -206,16 +207,16 @@ namespace Test
             //Arrange
             int n = 10;
 
-            List<Account> tokens = new List<Account>();
+            List<Account> accounts = new List<Account>();
 
             for (int i = 0; i < n; i++)
             {
-                tokens.Add(new Account
+                accounts.Add(new Account
                 {
                     is_valid = 1,
                     id = "testId0",
                     password = "testPwd0",
-                    access_token = i%3==1 ? "false" : "oA4C4FdNKL9ZB9Uo90XwUJ05vr15Cw2yNA2bhUrbh4"
+                    access_token = i % 3 == 1 ? "false" : "oA4C4FdNKL9ZB9Uo90XwUJ05vr15Cw2yNA2bhUrbh4"
                 }); ;
             }
 
@@ -226,12 +227,12 @@ namespace Test
                 artist = "testArtist"
             };
 
-            var expectedList = tokens.Where(x => x.access_token != "false").ToList();
+            var expectedList = accounts.Where(x => x.access_token != "false").ToList();
             int expectedListSize = expectedList.Count;
 
             string expectedMsg = Messages.AM01(eventInfo.title, eventInfo.artist) + Messages.URL;
 
-            IDbAccessor db = new StubDbAccessor(tokens);
+            IDbAccessor db = new StubDbAccessor(accounts);
             IEventInfoConverter ei = new StubEventInfoConverter(eventInfo);
             MockLineMessenger lm = new MockLineMessenger();
 

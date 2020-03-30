@@ -5,15 +5,15 @@ namespace Test
 {
     public class MockLineMessenger : ILineMessenger
     {
-        public List<(string token, string message)> InputList { get; } = new List<(string token, string message)>();
+        public List<(string accessToken, string message)> InputList { get; } = new List<(string accessToken, string message)>();
 
-        public bool SendMessage(string token, string message)
+        public bool SendMessage(string accessToken, string message)
         {
-            if(token == "false") 
+            if(accessToken == "false") 
             {
                 return false;
             }
-            InputList.Add((token, message));
+            InputList.Add((accessToken, message));
             return true;
         }
     }
