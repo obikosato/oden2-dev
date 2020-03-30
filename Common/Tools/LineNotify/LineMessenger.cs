@@ -10,7 +10,7 @@ namespace Common.Tools.LineNotify
         private readonly string pythonInterpreterPath = @"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe";
         private readonly string pythonScriptPath;
 
-        public LineMessenger(string pyscript = @"C:\Users\z00s600151\source\repos\BlazorApp0124\BlazorApp0124.Models\Tools\LineMessenger.py")
+        public LineMessenger(string pyscript = @"C:\oden2-dev\Common\Tools\LineNotify\LineMessenger.py")
         {
             pythonScriptPath = pyscript;
         }

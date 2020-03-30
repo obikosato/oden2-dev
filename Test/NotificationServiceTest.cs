@@ -8,7 +8,7 @@ using System.Linq;
 namespace Test
 {
     [TestClass]
-    public class NotifyServiceTest
+    public class NotificationServiceTest
     {
         string[] inputData = { };
 
@@ -44,7 +44,7 @@ namespace Test
             MockLineMessenger lm = new MockLineMessenger();
 
             //Act
-            using (NotifyService service = new NotifyService(db, ei, lm))
+            using (NotificationService service = new NotificationService(db, ei, lm))
             {
                 service.DoService(inputData);
             }
@@ -99,7 +99,7 @@ namespace Test
             MockLineMessenger lm = new MockLineMessenger();
 
             //Act
-            using (NotifyService service = new NotifyService(db, ei, lm))
+            using (NotificationService service = new NotificationService(db, ei, lm))
             {
                 service.DoService(inputData);
             }
@@ -136,7 +136,7 @@ namespace Test
             MockLineMessenger lm = new MockLineMessenger();
 
             //Act
-            using (NotifyService service = new NotifyService(db, ei, lm))
+            using (NotificationService service = new NotificationService(db, ei, lm))
             {
                 service.DoService(inputData);
             }
@@ -184,7 +184,7 @@ namespace Test
             MockLineMessenger lm = new MockLineMessenger();
 
             //Act
-            using (NotifyService service = new NotifyService(db, ei, lm))
+            using (NotificationService service = new NotificationService(db, ei, lm))
             {
                 service.DoService(inputData);
             }
@@ -236,7 +236,7 @@ namespace Test
             MockLineMessenger lm = new MockLineMessenger();
 
             //Act
-            using (NotifyService service = new NotifyService(db, ei, lm))
+            using (NotificationService service = new NotificationService(db, ei, lm))
             {
                 service.DoService(inputData);
             }
