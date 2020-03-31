@@ -61,10 +61,5 @@ namespace Common.Services
         public static string AM03 = "\n\n\nシステムのエラーにより、本日のイベント情報が取得できませんでした。";
 
         public static string URL = "\n\n\n横浜アリーナHP：" + "https://www.yokohama-arena.co.jp/";
-
-        public static string GetErrorMessage(Exception e)
-        {
-            return EM01 + e.Message + "\n" + e.InnerException + "\n" + e.GetHashCode().ToString();
-        }
     }
 }

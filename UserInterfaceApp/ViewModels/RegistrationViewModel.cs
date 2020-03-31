@@ -44,9 +44,9 @@ namespace UserInterfaceApp.ViewModels
                 }
                 return false;
             }
-            catch (Exception e)
+            catch
             {
-                Message = Messages.GetErrorMessage(e);
+                Message = Messages.EM01;
                 return false;
             }
         }
@@ -72,9 +72,9 @@ namespace UserInterfaceApp.ViewModels
                 }
                 return res.IsSuccessed;
             }
-            catch (Exception e)
+            catch
             {
-                Message = Messages.GetErrorMessage(e);
+                Message = Messages.EM01;
                 return false;
             }
         }

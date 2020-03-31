@@ -5,7 +5,7 @@ namespace Log
 {
     public class Logger : ILogger
     {
-        public void Log(string id = "None", string message = "No data.")
+        public void Log(string message, string id = "None")
         {
             string path = @"oden_log.csv";
             using StreamWriter sw = File.AppendText(path);
