@@ -1,5 +1,27 @@
 ﻿@page "/"
+@inject NavigationManager NavigationManager
 
-<h1>Hello, world!</h1>
+<h1>
+    新横浜混雑アラートアプリ
+</h1>
 
-Welcome to your new app.
+このアプリは、横浜アリーナのイベント情報をもとに、
+<br>
+新横浜駅の混雑をアラートします。
+<br>
+<br>
+
+<p><button class="btn btn-primary" @onclick="JumpToRegist">通知先登録</button></p>
+<p><button class="btn btn-primary" @onclick="JumpToUnregist">通知先登録解除</button></p>
+
+@code{
+    private void JumpToRegist()
+    {
+        NavigationManager.NavigateTo("/regist");
+    }
+
+    private void JumpToUnregist()
+    {
+        NavigationManager.NavigateTo("/unregist");
+    }
+}
