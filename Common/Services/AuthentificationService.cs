@@ -36,9 +36,9 @@ namespace Common.Services
                         output.IsSuccessed = true;
                         return output;
                     }
-                    catch(Exception e)
+                    catch
                     {
-                        output.Result["MESSAGE"] = Messages.GetErrorMessage(e);
+                        output.Result["MESSAGE"] = Messages.EM01;
                         return output;
                     }
                 }
