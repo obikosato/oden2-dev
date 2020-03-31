@@ -7,7 +7,8 @@ namespace Log
     {
         public void Log(string message, string id = "None")
         {
-            string path = @"oden_log.csv";
+            
+            string path = Path.GetFullPath(".")+@"\oden_log.csv";
             using StreamWriter sw = File.AppendText(path);
             sw.WriteLine("{0},{1},{2}", DateTime.Now, id, message);
         }
