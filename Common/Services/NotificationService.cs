@@ -52,7 +52,7 @@ namespace Common.Services
                 alertMessage = Messages.AM03;
             }
 
-            logger.Log(message:alertMessage);
+            logger.Log(alertMessage, "アラートメッセージ");
             alertMessage += Messages.URL;
 
             try
@@ -61,7 +61,7 @@ namespace Common.Services
                 var tokens = dbAccessor.GetActiveAccounts();
                 foreach (var x in tokens)
                 {
-                    string logMessage = lineMessenger.SendMessage(x.access_token, alertMessage) ? "アラート送信成功" : "アラート送信成功";
+                    string logMessage = lineMessenger.SendMessage(x.access_token, alertMessage) ? "アラート送信成功" : "アラート送信失敗";
                     logger.Log(logMessage, x.id);
                 }
                 return output;
