@@ -1,0 +1,72 @@
+﻿@page "/regist/auth"
+@page "/regist/auth/{LinkIdstr}"
+@inject ViewModels.RegistrationViewModel vm
+@inject NavigationManager NavigationManager
+<!--
+    File: Auth.razor
+    Author: Obiko Sato
+    Copyright: Copyright 2020, Oden
+    Email: Obiko.Sato@jp.ricoh.com
+-->
+
+<h1>
+    新横浜混雑アラートアプリ / 通知先認証
+</h1>
+<br>
+<p><font color="red"><strong>@vm.Message</strong></font></p>
+<br>
+<p>
+    認証番号
+    <input autofocus
+           required
+           type="text"
+           size="4"
+           minlength="4"
+           maxlength="4"
+           pattern="^[0-9]+$"
+           @bind="vm.AuthIn"
+           placeholder="8888"
+           title="4桁の半角数字" />
+</p>
+
+<button class="btn btn-primary" @onclick="CallRegistration">
+    登録
+</button>
+
+<button class="btn btn-secondary" @onclick="ToIndex">
+    やめる
+</button>
+
+@code {
+    [Parameter]
+    public string LinkIdstr { get; set; }
+
+    private void ToIndex()
+    {
+        vm.DoCancel();
+        NavigationManager.NavigateTo("/");
+        vm.Id = null;
+        vm.Pwd = null;
+        vm.Token = null;
+        vm.AuthIn = null;
+        vm.Message = null;
+        this.StateHasChanged();
+    }
+
+    private void CallRegistration()
+    {
+        vm.Id = LinkIdstr;
+        vm.Message = null;
+        if (vm.InputNoIsValid())
+        {
+            if (vm.DoAuth())
+            {
+                NavigationManager.NavigateTo("/regist");
+                vm.Id = null;
+            }
+        }
+        vm.AuthIn = null;
+        this.StateHasChanged();
+    }
+}
+
