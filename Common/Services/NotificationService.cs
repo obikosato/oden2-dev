@@ -3,6 +3,7 @@ using System.Globalization;
 using Common.Tools.Database;
 using Common.Tools.LineNotify;
 using Common.Tools.WebSite;
+using Log;
 using TimeZoneConverter;
 
 namespace Common.Services
@@ -12,6 +13,7 @@ namespace Common.Services
         private readonly IDbAccessor dbAccessor;
         private readonly ILineMessenger lineMessenger;
         private readonly IEventInfoConverter eventInfoConverter;
+        private readonly Logger logger = new Logger();
 
         public NotificationService(IDbAccessor dbAccessor, IEventInfoConverter eventInfoConverter, ILineMessenger lineMessenger) 
         {
@@ -49,15 +51,26 @@ namespace Common.Services
                 //イベント情報を取得できなかった場合
                 alertMessage = Messages.AM03;
             }
+
+            logger.Log(alertMessage, "アラートメッセージ");
             alertMessage += Messages.URL;
-           
-            //有効な通知先情報を取得
-            var tokens = dbAccessor.GetActiveAccounts();
-            foreach (var x in tokens)
+
+            try
             {
-                lineMessenger.SendMessage(x.access_token, alertMessage);
+                //有効な通知先情報を取得
+                var tokens = dbAccessor.GetActiveAccounts();
+                foreach (var x in tokens)
+                {
+                    string logMessage = lineMessenger.SendMessage(x.access_token, alertMessage) ? "アラート送信成功" : "アラート送信失敗";
+                    logger.Log(logMessage, x.id);
+                }
+                return output;
             }
-            return output;
+            catch
+            {
+                logger.Log(message:"データベース未接続");
+                return output;
+            }
         }
         
         public void Dispose()

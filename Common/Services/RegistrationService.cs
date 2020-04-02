@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Common.Tools.Database;
 using Common.Tools.LineNotify;
+using Log;
 
 namespace Common.Services
 
@@ -11,6 +12,7 @@ namespace Common.Services
     {
         private readonly IDbAccessor dbAccessor;
         private readonly ILineMessenger lineMessenger;
+        private readonly ILogger logger = new Logger();
 
         public RegistrationService(IDbAccessor dbAccessor, ILineMessenger lineMessenger)
         {
@@ -37,8 +39,11 @@ namespace Common.Services
                     string authNo = rnd.Next(10000).ToString("D4");
                     string msg = "\n認証番号：" + authNo;
 
-                    if (lineMessenger.SendMessage(registeredAccount.access_token, msg))
+                    bool MessageWasSent = lineMessenger.SendMessage(registeredAccount.access_token, msg);
+
+                    if (MessageWasSent)
                     {
+                        logger.Log("認証番号送信成功", inputData[0]);
                         output.Result["MESSAGE"] = Messages.PM03;
                         output.Result.Add("AUTHNO", authNo);
                         output.IsSuccessed = true;
@@ -46,6 +51,7 @@ namespace Common.Services
                     }
                     else
                     {
+                        logger.Log("認証番号送信失敗", inputData[0]);
                         dbAccessor.DeleteAccount(inputData[0]);
                         output.Result["MESSAGE"] = Messages.EM04;
                         return output;
@@ -69,10 +75,12 @@ namespace Common.Services
                             return output;
                         }
                     }
+                    logger.Log("データベース未接続", inputData[0]);
                     output.Result["MESSAGE"] = Messages.EM01;
                     return output;
                 }
             }
+            logger.Log("登録サービスへの入力データが不正", inputData[0]);
             output.Result["MESSAGE"] = Messages.EM10;
             return output;
         }
