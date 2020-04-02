@@ -28,32 +28,30 @@ namespace Common.Services
         public static readonly string EM11 = "未入力の欄があります！！";
         public static readonly string EM12 = "入力が不正です！！";
 
-        public static string AM01(string eventName, string artist)
+        public static string AM01(string eventName="", string artist="")
         {
-            bool noEventName = string.IsNullOrEmpty(eventName);
-            bool noArtist = string.IsNullOrEmpty(artist);
-
-            string msg = "\n\n■新横浜混雑注意報■\n\n" +
-                "本日、新横浜駅周辺で混雑が予想されます。";
-
-            if (noEventName && noArtist)
+            string msg = "\n\n";
+            string[] arr = artist.Split('※');
+            if (arr.Length > 1)
             {
-                msg += "\n横浜アリーナでイベントが開催されます。";
+                msg = "本日予定されていた次のイベントは【" + arr[1] + "】です。";
+                artist = arr[0]; 
             }
             else
             {
-                msg += "\n横浜アリーナで次のイベントが開催されます。" +
-                    "\n\n--本日開催！！--\n";
+                msg += "■新横浜混雑注意報■\n\n";
+                msg += "本日、新横浜駅周辺で混雑が予想されます。\n";
+                msg += "次のイベントが本日横浜アリーナで開催予定です。";
+            }
 
-                if (!noEventName)
-                {
-                    msg += "\nイベント名：" + eventName;
-                }
+            if (!string.IsNullOrEmpty(eventName))
+            {
+                msg += "\nイベント名：" + eventName;
+            }
 
-                if (!noArtist)
-                {
-                    msg += "\nアーティスト名：" + artist;
-                }
+            if (!string.IsNullOrEmpty(artist))
+            {
+                msg += "\nアーティスト名：" + artist;
             }
             return msg;
         }
