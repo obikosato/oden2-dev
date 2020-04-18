@@ -28,20 +28,24 @@ namespace Common.Services
         public static readonly string EM11 = "未入力の欄があります！！";
         public static readonly string EM12 = "入力が不正です！！";
 
-        public static string AM01(string eventName="", string artist="")
+        public static string AM01(string eventName = "", string artist = "")
         {
-            string msg = "\n\n";
-            string[] arr = artist.Split('※');
-            if (arr.Length > 1)
+            string msg = "\n\n■新横浜混雑注意報■\n\n";
+            msg += "本日、新横浜駅周辺で混雑が予想されます。\n";
+            msg += "次のイベントが本日横浜アリーナで開催予定です。";
+
+            string[] eventNameArr = eventName.Split('※');
+            string[] artistArr = artist.Split('※');
+            if (eventNameArr.Length > 1)
             {
-                msg = "本日予定されていた次のイベントは【" + arr[1] + "】です。";
-                artist = arr[0]; 
+                msg = "\n\n本日予定されていた次のイベントは【" + eventNameArr[1] + "】です。";
+                eventName = eventNameArr[0];
             }
-            else
+            
+            if (artistArr.Length > 1)
             {
-                msg += "■新横浜混雑注意報■\n\n";
-                msg += "本日、新横浜駅周辺で混雑が予想されます。\n";
-                msg += "次のイベントが本日横浜アリーナで開催予定です。";
+                msg = "\n\n本日予定されていた次のイベントは【" + artistArr[1] + "】です。";
+                artist = artistArr[0];
             }
 
             if (!string.IsNullOrEmpty(eventName))
@@ -52,7 +56,7 @@ namespace Common.Services
             if (!string.IsNullOrEmpty(artist))
             {
                 msg += "\nアーティスト名：" + artist;
-            }
+            }        
             return msg;
         }
         public static string AM02 = "\n\n\n本日、新横浜周辺のイベントはありません。";
